@@ -52,15 +52,12 @@ export default function About() {
                     <div className="absolute inset-0 bg-navy-900/20" />
 
                     {/* Optional initials fallback */}
-                    <div className="relative z-10 h-full flex flex-col items-center justify-center">
-                      <div className="w-24 h-24 rounded-full bg-teal-500/20 border-2 border-teal-400/30 flex items-center justify-center mx-auto mb-3">
+                    <div className="relative z-10 h-full flex items-center justify-center">
+                      <div className="w-24 h-24 rounded-full bg-teal-500/20 border-2 border-teal-400/30 flex items-center justify-center">
                         <span className="font-display font-700 text-4xl gradient-text">
                           HA
                         </span>
                       </div>
-                      <p className="font-mono text-xs text-teal-500">
-                        haris.arief
-                      </p>
                     </div>
                   </div>
                 </div>
