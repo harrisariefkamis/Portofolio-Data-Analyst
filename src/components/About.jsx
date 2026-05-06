@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion'
-import { User, Download, CheckCircle2 } from 'lucide-react'
-import { PERSONAL } from '../data/portfolio'
+import { motion } from "framer-motion";
+import { User, Download, CheckCircle2 } from "lucide-react";
+import { PERSONAL } from "../data/portfolio";
 
 const highlights = [
-  'Mahasiswa aktif S1 Sains Data IPK 3.69',
-  'Lulus program D3 Teknik Komputer',
-  'Pengalaman FullStack Data Analysis Bootcamp (2 bulan)',
-  'Memahami SQL, Python, BigQuery, Looker Studio',
-  'Pengalaman kepemimpinan organisasi mahasiswa',
-  'Tertarik pada proyek data yang menantang',
-]
+  "Mahasiswa aktif S1 Sains Data IPK 3.69",
+  "Lulus program D3 Teknik Komputer",
+  "Pengalaman FullStack Data Analysis Bootcamp (2 bulan)",
+  "Memahami SQL, Python, BigQuery, Looker Studio",
+  "Pengalaman kepemimpinan organisasi mahasiswa",
+  "Tertarik pada proyek data yang menantang",
+];
 
 export default function About() {
   return (
@@ -24,8 +24,12 @@ export default function About() {
             <User className="w-5 h-5 text-teal-400" />
           </div>
           <div>
-            <p className="font-mono text-xs text-teal-500 tracking-widest mb-0.5">01 / ABOUT</p>
-            <h2 className="font-display font-700 text-3xl text-slate-100">Tentang Saya</h2>
+            <p className="font-mono text-xs text-teal-500 tracking-widest mb-0.5">
+              01 / ABOUT
+            </p>
+            <h2 className="font-display font-700 text-3xl text-slate-100">
+              Tentang Saya
+            </h2>
           </div>
           <div className="flex-1 h-px bg-gradient-to-r from-teal-500/20 to-transparent ml-4" />
         </div>
@@ -37,28 +41,56 @@ export default function About() {
               {/* Decorative photo placeholder */}
               <div className="relative w-64 h-64 mx-auto lg:mx-0 mb-8">
                 <div className="w-full h-full rounded-2xl bg-gradient-to-br from-teal-500/20 via-navy-800 to-amber-500/10 border border-teal-500/20 flex items-center justify-center overflow-hidden">
-                  {/* Avatar initials */}
-                  <div className="text-center">
-                    <div className="w-24 h-24 rounded-full bg-teal-500/20 border-2 border-teal-400/30 flex items-center justify-center mx-auto mb-3">
-                      <span className="font-display font-700 text-4xl gradient-text">HA</span>
+                  {/* Avatar photo */}
+                  <div className="text-center relative w-full h-full">
+                    <img
+                      src="/harisariefkamis.jpg"
+                      alt="Foto Haris Arief Kamis"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    {/* Overlay for readability */}
+                    <div className="absolute inset-0 bg-navy-900/20" />
+
+                    {/* Optional initials fallback */}
+                    <div className="relative z-10 h-full flex flex-col items-center justify-center">
+                      <div className="w-24 h-24 rounded-full bg-teal-500/20 border-2 border-teal-400/30 flex items-center justify-center mx-auto mb-3">
+                        <span className="font-display font-700 text-4xl gradient-text">
+                          HA
+                        </span>
+                      </div>
+                      <p className="font-mono text-xs text-teal-500">
+                        haris.arief
+                      </p>
                     </div>
-                    <p className="font-mono text-xs text-teal-500">haris.arief</p>
                   </div>
                 </div>
                 {/* Floating badges */}
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute -top-3 -right-3 glass rounded-lg px-3 py-1.5 border border-teal-500/20"
                 >
-                  <span className="font-mono text-xs text-teal-400">IPK 3.69 ⭐</span>
+                  <span className="font-mono text-xs text-teal-400">
+                    IPK 3.69 ⭐
+                  </span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
                   className="absolute -bottom-3 -left-3 glass rounded-lg px-3 py-1.5 border border-amber-500/20"
                 >
-                  <span className="font-mono text-xs text-amber-400">Data Analyst 📊</span>
+                  <span className="font-mono text-xs text-amber-400">
+                    Data Analyst 📊
+                  </span>
                 </motion.div>
               </div>
             </div>
@@ -66,19 +98,29 @@ export default function About() {
             {/* Bio text */}
             <div className="space-y-4 text-slate-400 leading-relaxed">
               <p>
-                Saya adalah <span className="text-slate-200 font-medium">Haris Arief Kamis</span>, mahasiswa 
-                S1 Sains Data di <span className="text-teal-400">Universitas Insan Cita Indonesia (UICI)</span> dengan
-                IPK 3.69, sekaligus lulusan program D3 Teknik Komputer.
+                Saya adalah{" "}
+                <span className="text-slate-200 font-medium">
+                  Haris Arief Kamis
+                </span>
+                , mahasiswa S1 Sains Data di{" "}
+                <span className="text-teal-400">
+                  Universitas Insan Cita Indonesia (UICI)
+                </span>{" "}
+                dengan IPK 3.69, sekaligus lulusan program D3 Teknik Komputer.
               </p>
               <p>
-                Passion saya terletak pada kemampuan mengolah data menjadi insight yang bermakna — 
-                mulai dari <span className="text-slate-200">data cleaning</span>, <span className="text-slate-200">SQL querying</span>, 
-                hingga <span className="text-slate-200">visualisasi interaktif</span> yang mempermudah pengambilan keputusan bisnis.
+                Passion saya terletak pada kemampuan mengolah data menjadi
+                insight yang bermakna — mulai dari{" "}
+                <span className="text-slate-200">data cleaning</span>,{" "}
+                <span className="text-slate-200">SQL querying</span>, hingga{" "}
+                <span className="text-slate-200">visualisasi interaktif</span>{" "}
+                yang mempermudah pengambilan keputusan bisnis.
               </p>
               <p>
-                Saya aktif berkontribusi dalam berbagai organisasi kemahasiswaan dan memiliki pengalaman 
-                kepemimpinan yang kuat — mulai dari ketua panitia event besar hingga koordinator program 
-                sosial lingkungan hidup.
+                Saya aktif berkontribusi dalam berbagai organisasi kemahasiswaan
+                dan memiliki pengalaman kepemimpinan yang kuat — mulai dari
+                ketua panitia event besar hingga koordinator program sosial
+                lingkungan hidup.
               </p>
             </div>
 
@@ -114,20 +156,44 @@ export default function About() {
 
             {/* Contact info card */}
             <div className="glass rounded-xl p-5 border border-teal-500/10 space-y-3">
-              <p className="font-mono text-xs text-teal-500 tracking-widest mb-4">KONTAK INFO</p>
+              <p className="font-mono text-xs text-teal-500 tracking-widest mb-4">
+                KONTAK INFO
+              </p>
               {[
-                { label: 'Email', value: PERSONAL.email, href: `mailto:${PERSONAL.email}` },
-                { label: 'Phone', value: PERSONAL.phone, href: `tel:${PERSONAL.phone}` },
-                { label: 'Location', value: PERSONAL.location, href: null },
-                { label: 'LinkedIn', value: 'harisariefkamis', href: PERSONAL.linkedin },
-                { label: 'GitHub', value: 'harisariefkamis', href: PERSONAL.github },
+                {
+                  label: "Email",
+                  value: PERSONAL.email,
+                  href: `mailto:${PERSONAL.email}`,
+                },
+                {
+                  label: "Phone",
+                  value: PERSONAL.phone,
+                  href: `tel:${PERSONAL.phone}`,
+                },
+                { label: "Location", value: PERSONAL.location, href: null },
+                {
+                  label: "LinkedIn",
+                  value: "harisariefkamis",
+                  href: PERSONAL.linkedin,
+                },
+                {
+                  label: "GitHub",
+                  value: "harisariefkamis",
+                  href: PERSONAL.github,
+                },
               ].map(({ label, value, href }) => (
                 <div key={label} className="flex gap-3 text-sm">
-                  <span className="text-slate-600 font-mono w-20 shrink-0">{label}</span>
+                  <span className="text-slate-600 font-mono w-20 shrink-0">
+                    {label}
+                  </span>
                   <span className="text-slate-600">:</span>
                   {href ? (
-                    <a href={href} target="_blank" rel="noreferrer"
-                      className="text-teal-400 hover:text-teal-300 transition-colors truncate">
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-teal-400 hover:text-teal-300 transition-colors truncate"
+                    >
                       {value}
                     </a>
                   ) : (
@@ -140,5 +206,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
