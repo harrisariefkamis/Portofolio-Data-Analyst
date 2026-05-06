@@ -5,7 +5,7 @@ git branch -M main
 
 # Buat repo di GitHub: github.com/New > "Portofolio Data Anlyst" > Create (no README)
 # Copy commands dari GitHub, contoh:
-git remote add origin https://github.com/YOURUSERNAME/haris-portfolio-2026.git
+git remote add origin https://github.com/Portofolio Data Analyst.git
 git push -u origin main
 
 {
